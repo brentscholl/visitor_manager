@@ -24,7 +24,7 @@ The platform enables businesses to create customized sign-in forms that can be d
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/visitor-manager.git
+   git clone https://github.com/brentscholl/visitor-manager.git
    cd visitor-manager
    ```
 
