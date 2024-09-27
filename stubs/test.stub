@@ -1,0 +1,31 @@
+<?php
+
+namespace {{ namespace }};
+
+use Tests\Testable;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
+
+class {{ class }} extends TestCase
+{
+	use RefreshDatabase;
+    use Testable;
+
+	public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->artisan('db:seed');
+
+        $this->setAuthUser();
+    }
+
+    /** @test **/
+    public function test_example()
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+}
