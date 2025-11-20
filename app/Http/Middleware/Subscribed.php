@@ -15,11 +15,11 @@ class Subscribed
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user = auth()->user();
-        if ($user && ($user->currentTeam->subscribed() || $user->currentTeam->onTrial())) {
+        //$user = auth()->user();
+        //if ($user && ($user->currentTeam->subscribed() || $user->currentTeam->onTrial())) {
             return $next($request);
-        }
+        //}
 
-        return redirect('/billing');
+        //return redirect('/billing');
     }
 }

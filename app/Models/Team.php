@@ -7,7 +7,7 @@
     use Laravel\Jetstream\Events\TeamDeleted;
     use Laravel\Jetstream\Events\TeamUpdated;
     use Laravel\Jetstream\Team as JetstreamTeam;
-    use Spark\Billable;
+    //use Spark\Billable;
 
     /**
      * Model representing a team in the application.
@@ -15,7 +15,8 @@
      */
     class Team extends JetstreamTeam
     {
-        use HasFactory, Billable;
+        use HasFactory;
+        // use Billable;
 
         /**
          * The attributes that should be cast to native types.

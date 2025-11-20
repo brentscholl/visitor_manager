@@ -1,25 +1,27 @@
 <div>
     {{-- Display a trial notification if the current team is on trial --}}
-    @if (auth()->user()->currentTeam->onTrial())
-        <div class="fixed w-full z-10 top-0 h-12 flex items-center justify-center bg-indigo-100 text-indigo-700 text-sm border-b border-indigo-200 text-center">
-            @if(auth()->user()->currentTeam->owner->id === auth()->user()->id)
-                <span>
-                    Enjoy your free trial! Don't forget to <a href="/billing" class="font-semibold underline">choose a
-                    subscription plan</a> if you like our product. Your trial will expire
-                    on {{ auth()->user()->currentTeam->trial_ends_at->format('F jS, Y') }}.
-                </span>
-            @else
-                <span>
-                    Enjoy your free trial! Don't forget to ask your team owner to <a href="/billing" class="font-semibold underline">choose a
-                    subscription plan</a> if you like our product. Your team's trial will expire on {{ auth()->user()->currentTeam->trial_ends_at->format('F jS, Y') }}.
-                </span>
-            @endif
-        </div>
-    @endif
+{{--    @if (auth()->user()->currentTeam->onTrial())--}}
+{{--        <div class="fixed w-full z-10 top-0 h-12 flex items-center justify-center bg-indigo-100 text-indigo-700 text-sm border-b border-indigo-200 text-center">--}}
+{{--            @if(auth()->user()->currentTeam->owner->id === auth()->user()->id)--}}
+{{--                <span>--}}
+{{--                    Enjoy your free trial! Don't forget to <a href="/billing" class="font-semibold underline">choose a--}}
+{{--                    subscription plan</a> if you like our product. Your trial will expire--}}
+{{--                    on {{ auth()->user()->currentTeam->trial_ends_at->format('F jS, Y') }}.--}}
+{{--                </span>--}}
+{{--            @else--}}
+{{--                <span>--}}
+{{--                    Enjoy your free trial! Don't forget to ask your team owner to <a href="/billing" class="font-semibold underline">choose a--}}
+{{--                    subscription plan</a> if you like our product. Your team's trial will expire on {{ auth()->user()->currentTeam->trial_ends_at->format('F jS, Y') }}.--}}
+{{--                </span>--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--    @endif--}}
 
     {{-- Navigation menu component --}}
     <nav x-data="{ open: false }"
-        class="bg-white border-b border-gray-100 fixed z-10 w-full @if (auth()->user()->currentTeam->onTrial()) top-12 @endif">
+        class="bg-white border-b border-gray-100 fixed z-10 w-full
+{{--        @if (auth()->user()->currentTeam->onTrial()) top-12 @endif--}}
+        ">
         <!-- Primary Navigation Menu -->
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -290,7 +292,7 @@
     </nav>
 
     {{-- Additional space if the current team is on trial --}}
-    @if (auth()->user()->currentTeam->onTrial())
-        <div class="h-12 w-full block"></div>
-    @endif
+{{--    @if (auth()->user()->currentTeam->onTrial())--}}
+{{--        <div class="h-12 w-full block"></div>--}}
+{{--    @endif--}}
 </div>
