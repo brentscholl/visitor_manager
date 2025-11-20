@@ -14,7 +14,7 @@ The platform enables businesses to create customized sign-in forms that can be d
 
 ## Requirements
 
-- PHP 8.0+
+- PHP 8.1
 - Laravel 9.x
 - MySQL or another supported database
 - Composer
