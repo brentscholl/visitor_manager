@@ -285,7 +285,7 @@
                                 <x-switchable-team :team="$team" component="responsive-nav-link"/>
                             @endforeach
                         @endif
-                    @endif
+                    @endif
                 </div>
             </div>
         </div>
